@@ -4,6 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# dotenv-rails
+.env
+
 # Ignore bundler config.
 /.bundle
 
@@ -19,3 +22,19 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+### Vim ###
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
