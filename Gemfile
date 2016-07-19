@@ -15,6 +15,10 @@ gem 'mysql2'
 gem 'dotenv-rails'
 gem 'config'
 
+group :staging, :production do
+  gem 'unicorn'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -33,6 +37,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano3-unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -18,12 +18,12 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
+# unicorn
+set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
+after 'deploy:publishing', 'deploy:restart'
+
 namespace :deploy do
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      within release_path do
-        execute :rake, 'cache:clear'
-      end
-    end
+  task :restart do
+    invoke 'unicorn:restart'
   end
 end
