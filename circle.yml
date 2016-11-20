@@ -1,0 +1,21 @@
+# build target blanches
+general:
+  branches:
+    only:
+      - release
+      - staging
+
+machine:
+  ruby:
+    version: 2.3.1
+  timezone: Asia/Tokyo
+
+deployment:
+  production:
+    branch: release
+    commands:
+      - bash ./ci/deploy_prod.sh
+  staging:
+    branch: staging
+    commands:
+      - bash ./ci/deploy_staging.sh
