@@ -1,4 +1,5 @@
 worker_processes 1
+# rename your server path
 app_directory = "/var/www/template_project/current"
 listen "#{app_directory}/tmp/sockets/unicorn.sock", backlog: 128
 timeout 30

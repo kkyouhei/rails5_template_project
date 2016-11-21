@@ -1,4 +1,5 @@
 worker_processes 2
+# rename your server path
 app_directory = "/var/www/template_project/current"
 working_directory app_directory # available in 0.94.0+
 listen "#{app_directory}/tmp/sockets/unicorn.sock", backlog: 128

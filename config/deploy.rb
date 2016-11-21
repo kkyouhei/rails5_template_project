@@ -1,6 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
+# TODO rename project name
 set :application, 'rails5_template_project'
 set :repo_url, 'git@github.com:kkyouhei/rails5_template_project.git'
 set :deploy_to, '/var/www/template_project'

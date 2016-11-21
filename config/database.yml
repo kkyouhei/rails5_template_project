@@ -10,6 +10,7 @@ default: &default
   timeout: 5000
   host: "localhost"
 
+# TODO rename databasename
 development:
   <<: *default
   database: "template_project_development"
