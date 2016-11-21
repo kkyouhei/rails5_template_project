@@ -1,24 +1,19 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# boot project
 
-Things you may want to cover:
+rails5 template project
+capistrano and unicorn, CircleCI, rspec settings already.
 
-* Ruby version
+# Getting Started
 
-* System dependencies
+1. clone this repository
 
-* Configuration
+```bash
+$ git clone
+```
 
-* Database creation
+2. TODO
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rake notes
+```
