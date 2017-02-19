@@ -5,15 +5,17 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: "mysql2"
-  encoding: "utf8"
+  adapter: mysql2
+  encoding: utf8
   timeout: 5000
-  host: "localhost"
+  host: db
+  username: user_name
+  password: fasjkdl29
 
 # TODO rename databasename
 development:
   <<: *default
-  database: "template_project_development"
+  database: your_database_name
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,9 +26,6 @@ test:
 
 staging:
   <<: *default
-  database: "template_project_staging"
-  username: "root"
-  password: ""
 
 production:
   <<: *default
