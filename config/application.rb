@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# TODO modify module name to your project name
 module TemplateProject
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
